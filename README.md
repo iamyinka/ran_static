@@ -1,0 +1,1 @@
+RAN static pages
