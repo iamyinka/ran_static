@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Signika Negative', sans-serif;
+
+*/
+
+body {
+  background: linear-gradient(90deg, #fff 15px, transparent 1%) 50%, linear-gradient(#fff 15px, transparent 1%) 50%, #51178c;
+  background-size: 16px 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Signika Negative", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+/* #logo {
+  order: 1;
+} */
+
+.nav-items {
+  order: -2;
+  align-self: center;
+}
+
+.nav-items ul {
+  display: flex;
+  /* background-color: orange; */
+  /* gap: 1.2rem; */
+}
+
+.nav-items li {
+  /* padding: 0.5rem;
+  border-right: 2px solid rgba(10, 10, 10, 0.35); */
+  /* background-color: orange; */
+}
+
+/* .nav-items li:last-child {
+  border-right: none;
+} */
+
+.nav-items a,
+#donate a,
+#mobile_menu a {
+  color: rgba(10, 10, 10, 0.55);
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.nav-items a:hover,
+#donate a:hover,
+#mobile_menu a:hover {
+  color: #000;
+}
+
+.nav-items a {
+  padding: 0 0.5rem;
+  border-right: 2px solid rgba(10, 10, 10, 0.35);
+}
+
+.nav-items li:last-child a {
+  border-right: none;
+}
+
+/* #mobile_menu ul {
+  background-color: orange;
+} */
+
+#mobile_menu li {
+  width: 100%;
+  max-width: 100%;
+}
+
+#mobile_menu a {
+  border: 2px solid rgba(10, 10, 10, 0.35);
+  padding: 0.2rem 0.85rem;
+  transition: all 0.5s ease-in;
+  border-radius: 0.35rem;
+  box-sizing: border-box !important;
+}
+
+#mobile_menu a:hover {
+  background-color: rgba(10, 10, 10, 0.75);
+  color: #fff;
+}
+
+.btn-custom {
+  border: 0.2rem solid #000;
+  padding: 0.2rem 0.85rem;
+  color: #000;
+  box-shadow: 0.2rem 0.25rem 0.3rem rgba(3, 3, 3, 0.78);
+}
+
+#donate .btn-custom:hover {
+  color: #fff;
+  background-color: rgb(237, 20, 0);
+}
+
+#logo img {
+  width: 7rem;
+  max-width: 100%;
+  object-fit: 1;
+}
+
+#mobile_menu {
+  display: none;
+}
+
+main {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.intro-img {
+  background: url("https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L2stZy1nMDg5OS1jaGFyaXR5LmpwZw.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: 1;
+  min-height: 20rem;
+  z-index: -20;
+  opacity: 0.6;
+}
+
+.our-mission {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Partners */
+
+.partners {
+  background-color: rgb(237, 20, 0);
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+}
+
+.logos {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.partner-logo {
+  margin-bottom: 1.5rem;
+}
+
+.partner-logo img {
+  width: 8.5rem;
+}
+
+/* Testimonials */
+
+.testimonials {
+  padding: 5rem 0;
+}
+
+.testimonials h2 {
+  font-weight: bold;
+  text-shadow: 0.2rem 0.25rem 0.31rem rgba(10, 10, 10, 0.35);
+}
+
+.grid-testimonials {
+  overflow: hidden;
+  padding-top: 3.125em;
+}
+.grid-testimonials li {
+  float: left;
+  list-style-type: none;
+  padding-bottom: 3.125em;
+}
+.grid-testimonials p {
+  line-height: 1.5em;
+  margin: 0;
+}
+.grid-testimonials-citation {
+  color: #656262;
+  display: block;
+  font-size: 1.125em;
+  font-weight: 700;
+  margin-top: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.grid-testimonials li div {
+  border: 10px solid #ebebeb;
+  padding: 2.125em 7.638888888888889%;
+  position: relative;
+}
+.grid-testimonials .quote-arrow {
+  background: #fff;
+  border-right: 10px solid #ebebeb;
+  border-bottom: 10px solid #ebebeb;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  margin-left: -25px;
+  width: 40px;
+  height: 40px;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+@media screen and (min-width: 50em) {
+  .grid-testimonials li {
+    margin-right: 5%;
+    width: 30%;
+  }
+  .grid-testimonials li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
