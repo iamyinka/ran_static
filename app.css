@@ -171,7 +171,7 @@ header {
   height: calc(90vh - 55px);
   width: 100%;
   max-width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
 }
 
 .header-bg {
@@ -242,7 +242,7 @@ section {
 
 .partners {
   background-color: rgb(237, 20, 0);
-  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  /* clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%); */
 }
 
 .logos {
@@ -533,7 +533,7 @@ section {
   margin-bottom: 17px;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 2.5rem;
 }
 
 .section-contact .header-section .title .dot {
@@ -556,7 +556,7 @@ section {
   bottom: 100%;
   left: 50%;
   transform: translate(-50%, 70%);
-  font-size: 120px;
+  font-size: 50px;
   font-weight: 700;
   opacity: 0.15;
 }
