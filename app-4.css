@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --section-color: rgb(61, 72, 83);
+  --primary-btn-color: rgb(227, 11, 23);
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-custom {
+  /* background-color: var(--primary-btn-color); */
+  background-color: #b33;
+  font-size: 1.5rem;
+  padding: 0.85rem 1.5rem;
+  transition: all 0.3s ease-in;
+}
+
+.btn-custom:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 0.15rem solid #b33;
+  border-radius: 1.2rem;
+}
+
+header {
+  background-color: var(--section-color);
+  opacity: 0.85;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-items a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#logo img {
+  width: 20rem;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  min-height: 70vh;
+  background: url("./images/home/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  /* background-color: #3c3; */
+}
