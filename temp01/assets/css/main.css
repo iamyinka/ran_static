@@ -8493,3 +8493,9 @@ input[type="color"] {
 .tp-preloader-icon img {
   width: 15rem;
 }
+
+.tpgallery-2-img img {
+  width: 1290px;
+  height: 507px;
+  object-fit: cover;
+}
