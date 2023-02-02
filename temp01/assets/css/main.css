@@ -1710,7 +1710,7 @@ input[type="color"] {
 }
 .main-menu ul li.has-dropdown > a::after {
   padding-left: 5px;
-  content: "+";
+  /* content: "+"; */
   font-family: var(--tp-ff-fontawesome);
   transition: 0.3s ease;
 }
