@@ -8482,7 +8482,7 @@ input[type="color"] {
   border-left: 2px solid;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# Custom CSS */
 
 .logo img,
 .tpfooter__logo img,
@@ -8504,3 +8504,14 @@ input[type="color"] {
 .tpproject-area a {
   color: #fff;
 } */
+
+.brand-area .brand-active .single-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-area .brand-active img {
+  width: 70%;
+  max-width: 100%;
+  object-fit: cover;
+}
