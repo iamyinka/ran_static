@@ -8515,3 +8515,16 @@ input[type="color"] {
   max-width: 100%;
   object-fit: cover;
 }
+
+.our-approch-img img,
+.our-mission-img img {
+  width: 100%;
+  /* max-width: 30rem; */
+  max-width: 326px;
+  height: 418px;
+  object-fit: cover;
+}
+
+.regular-text {
+  font-size: 1.2rem !important;
+}
