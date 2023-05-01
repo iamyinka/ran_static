@@ -8557,3 +8557,48 @@ input[type="color"] {
   font-weight: 400;
   line-height: 35px;
 }
+
+.tphero__subtitle {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.brand-area .brand-active .single-brand {
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-animation: scroll-left 2s linear infinite alternate-reverse;
+  -webkit-animation: scroll-left 2s linear infinite alternate-reverse;
+  animation: scroll-left 20s linear infinite alternate-reverse;
+}
+
+@-moz-keyframes scroll-left {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes scroll-left {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
