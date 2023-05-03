@@ -8580,6 +8580,17 @@ input[type="color"] {
   /* height: 541px; */
 }
 
+@media only screen and (max-width: 760px) {
+  .tphero__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .slider-title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
 @-moz-keyframes scroll-left {
   0% {
     -moz-transform: translateX(100%);
