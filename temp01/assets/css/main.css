@@ -8589,6 +8589,25 @@ input[type="color"] {
     font-size: 18px;
     line-height: 25px;
   }
+
+  .brand-area .brand-active .single-brand {
+    -moz-animation: scroll-left-sm 2s linear infinite alternate-reverse;
+    -webkit-animation: scroll-left-sm 2s linear infinite alternate-reverse;
+    animation: scroll-left-sm 10s linear infinite alternate-reverse;
+  }
+
+  @keyframes scroll-left-sm {
+    0% {
+      -moz-transform: translateX(300%);
+      -webkit-transform: translateX(300%);
+      transform: translateX(300%);
+    }
+    100% {
+      -moz-transform: translateX(-350%);
+      -webkit-transform: translateX(-350%);
+      transform: translateX(-350%);
+    }
+  }
 }
 
 @-moz-keyframes scroll-left {
