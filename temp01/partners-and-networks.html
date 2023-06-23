@@ -334,7 +334,7 @@
 
                             <div class="blog-details-content blog-details-no-secret">
                                 <h3 class="details-title">Partners:</h3>
-                                <ul>
+                                <ul id="partners">
                                     <li><span><i class="fas fa-check"></i></span>Association for Reproductive and Family
                                         Health (ARFH)</li>
                                     <li><span><i class="fas fa-check"></i></span>Institute for Human Virology Nigeria
@@ -419,7 +419,7 @@
                                     RAN is currently an active member of these alliances and networks*
                                 </p>
 
-                                <ul>
+                                <ul id="networks">
                                     <li><span><i class="fas fa-check"></i></span>International Anti-Leprosy Association
                                         (ILEP)</li>
                                     <li><span><i class="fas fa-check"></i></span>National Association of Public Health
@@ -571,6 +571,28 @@
     <script src="assets/js/imagesloaded-pkgd.js"></script>
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        var list = document.getElementById('partners');
+
+        var items = list.childNodes;
+        var itemsArr = [];
+        for (var i in items) {
+            if (items[i].nodeType == 1) { // get rid of the whitespace text nodes
+                itemsArr.push(items[i]);
+            }
+        }
+
+        itemsArr.sort(function (a, b) {
+            return a.innerHTML == b.innerHTML
+                ? 0
+                : (a.innerHTML > b.innerHTML ? 1 : -1);
+        });
+
+        for (i = 0; i < itemsArr.length; ++i) {
+            list.appendChild(itemsArr[i]);
+        }
+    </script>
 </body>
 
 </html>
