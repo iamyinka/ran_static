@@ -529,10 +529,10 @@
               <h3 class="section-title">Get involved and transform lives</h3>
               <p>
                 Charity is the act of giving help to those in <br />
-                need of it. it is a humanitarian act. it involves <br />
-                giving money goods or
+                need of it. It is a humanitarian act that involves <br />
+                giving money, goods or other items to meet the need of others.
               </p>
-              <ul>
+              <!-- <ul>
                 <li>
                   <span><i class="fas fa-check"></i></span>Lorem, ipsum dolor.
                 </li>
@@ -545,9 +545,9 @@
                 <li>
                   <span><i class="fas fa-check"></i></span>In aliquet dui nec lectus
                 </li>
-              </ul>
+              </ul> -->
               <div class="tpvolunteers-2-btn">
-                <a class="tp-btn tp-btn-shine-effect" href="#">Make a Donation</a>
+                <a class="tp-btn tp-btn-shine-effect" href="#" id="donateBtn">Make a Donation</a>
               </div>
             </div>
           </div>
@@ -1269,6 +1269,53 @@
   <script src="assets/js/imagesloaded-pkgd.js"></script>
   <script src="assets/js/ajax-form.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+
+    const donateBtn = document.querySelector("#donateBtn");
+
+    function payWithPaystack() {
+
+      var handler = PaystackPop.setup({
+        key: 'pk_test_52da50fc9e8aad372d09804591b184bf5e0764ce', //put your public key here
+        email: 'test@test.com', //put your customer's email here
+        amount: 20000, //amount the customer is supposed to pay
+        metadata: {
+          custom_fields: [
+            {
+              display_name: "Mobile Number",
+              variable_name: "mobile_number",
+              value: "+2348012345678" //customer's mobile number
+            }
+          ]
+        },
+        callback: function (response) {
+          //after the transaction have been completed
+          //make post call  to the server with to verify payment 
+          //using transaction reference as post data
+          $.post("verify.php", { reference: response.reference }, function (status) {
+            if (status == "success")
+              //successful transaction
+              alert('Transaction was successful');
+            else
+              //transaction failed
+              alert(response);
+          });
+        },
+        onClose: function () {
+          //when the user close the payment modal
+          alert('Transaction cancelled');
+        }
+      });
+
+      handler.openIframe(); //open the paystack's payment modal
+
+      donateBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        payWithPaystack();
+      })
+    }
+  </script>
 </body>
 
 </html>

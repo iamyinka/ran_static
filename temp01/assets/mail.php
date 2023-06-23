@@ -87,7 +87,7 @@
 
         //Email Header
 
-        $head = " /// Theme_Pure - Donafund \\\ ";
+        $head = " /// RedAid Nigeria \\\ ";
 
 
 
@@ -176,4 +176,3 @@
 
 
 ?>
-
