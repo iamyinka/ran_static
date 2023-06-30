@@ -573,25 +573,31 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        var list = document.getElementById('partners');
+        var partners = document.getElementById('partners');
+        var networks = document.getElementById('networks');
 
-        var items = list.childNodes;
-        var itemsArr = [];
-        for (var i in items) {
-            if (items[i].nodeType == 1) { // get rid of the whitespace text nodes
-                itemsArr.push(items[i]);
+        function sortList(parentEl) {
+            var items = parentEl.childNodes;
+            var itemsArr = [];
+            for (var i in items) {
+                if (items[i].nodeType == 1) { // get rid of the whitespace text nodes
+                    itemsArr.push(items[i]);
+                }
+            }
+
+            itemsArr.sort(function (a, b) {
+                return a.innerHTML == b.innerHTML
+                    ? 0
+                    : (a.innerHTML > b.innerHTML ? 1 : -1);
+            });
+
+            for (i = 0; i < itemsArr.length; ++i) {
+                parentEl.appendChild(itemsArr[i]);
             }
         }
 
-        itemsArr.sort(function (a, b) {
-            return a.innerHTML == b.innerHTML
-                ? 0
-                : (a.innerHTML > b.innerHTML ? 1 : -1);
-        });
-
-        for (i = 0; i < itemsArr.length; ++i) {
-            list.appendChild(itemsArr[i]);
-        }
+        sortList(partners);
+        sortList(networks);
     </script>
 </body>
 
